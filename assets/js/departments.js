@@ -1,5 +1,7 @@
 const inquirer = require('inquirer');
 
+const util = require('util');
+
 class Departments {
     constructor(database) {
         this.db = database;
