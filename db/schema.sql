@@ -7,24 +7,23 @@ USE employees_db;
 DROP TABLE IF EXISTS Departments;
 CREATE TABLE Departments (
     department_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(20) NOT NULL
+    name VARCHAR(30) NOT NULL
 );
 
 DROP TABLE IF EXISTS Roles;
 CREATE TABLE Roles (
-    FOREIGN KEY (department_id) REFERENCES departments(department_id)
     role_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    title VARCHAR(20) NOT NULL,
+    title VARCHAR(30) NOT NULL,
     salary DECIMAL,
     department_id INT NOT NULL,
-    
+    FOREIGN KEY (department_id) REFERENCES departments(department_id)
 );
 
 DROP TABLE IF EXISTS Employees;
 CREATE TABLE Employees (
     employee_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    first_name VARCHAR(20) NOT NULL,
-    last_name VARCHAR(20) NOT NULL,
+    first_name VARCHAR(30) NOT NULL,
+    last_name VARCHAR(30) NOT NULL,
     role_id INT,
     manager_id INT,
     FOREIGN KEY (role_id) REFERENCES roles(role_id)
