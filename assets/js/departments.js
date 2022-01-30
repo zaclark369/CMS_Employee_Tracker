@@ -20,7 +20,7 @@ class Departments {
     }
 
     async addDepartment() {
-        const query = util.promisify(`INSERT INTO Departments  `);
+        const query = util.promisify(this.db.query).bind(this.db);
         const sql = `INSERT INTO Departments (name) VALUES (?)`;
         const {Department} = await inquirer.prompt([
             {
@@ -29,9 +29,9 @@ class Departments {
                 name: 'Department'
             },
         ]);
-        const { addId } = await this.db.query(sql, (err, results) => {
+        const { insertId } = await query(sql, Department).catch((err) => {
             throw new Error(err);
-        })
+        });
         console.log(`department #${addId} added correctly`);
     }
 }
