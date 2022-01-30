@@ -1,1 +1,7 @@
-DB_PASSWORD = "  "
+# .env file
+#
+# Add environment-specific variables on new lines in the form of NAME=VALUE
+# 
+DB_HOST=" "
+DB_USER=" "
+DB_PASS="  "
