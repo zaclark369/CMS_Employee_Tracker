@@ -3,7 +3,7 @@
 
 
 
-const instructionArray = (arr) => {
+const instructArry = (arr) => {
     return arr
       .map((str, i) => {
         if (str === 'an' || str === 'a') {
@@ -18,4 +18,4 @@ const instructionArray = (arr) => {
       .join('');
   };
   
-  module.exports = instructionArray;
+  module.exports = instructArry;

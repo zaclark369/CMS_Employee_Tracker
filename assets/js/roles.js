@@ -49,10 +49,10 @@ class Roles {
               name: 'department_id',
               choices: countingArray,
           },
-      ]),
+      ]);
 
-      const {insertId } = await query(querySql, [
-          title, salary, department_id
+      const { insertId } = await query(querySql, [
+          title, salary, department_id,
       ]).catch((err) => {
           throw new Error(err);
       });

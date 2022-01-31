@@ -5,6 +5,7 @@ const databaseDirections = new instructionList(db);
 const instructionArray = require('./assets/js/instructionArray');
 
 const start = async () => {
+    console.log('we are in the start process');
     const uInstruction = await inquirer.prompt(
         {
             type: 'list',
