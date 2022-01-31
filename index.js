@@ -11,13 +11,15 @@ const start = async () => {
             type: 'list',
             name: 'instruction',
             message: 'How would you like to process',
-            choices: ['View Departments', 'View Roles', 'View Employees', 'Add Department', 'Add Employees', "Add Role", "Update", 'EXIT']
+            choices: ['view departments', 'view roles', 'view employees', 'add department', 'add employees', "add roles", "update", 'finish']
         }
     );
     
     const instructArry = uInstruction.instruction.split(' ');
-    const parseUInstruction = instructionArray(instructArry);
-    await databaseDirections[parseUInstruction]();
+    console.log(instructArry);
+    const parseInstruction = instructionArray(instructArry);
+    console.log(parseInstruction);
+    await databaseDirections[parseInstruction]();
     start();
 }
 

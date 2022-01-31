@@ -32,7 +32,7 @@ class Departments {
         const { insertId } = await query(sql, Department).catch((err) => {
             throw new Error(err);
         });
-        console.log(`department #${addId} added correctly`);
+        console.log(`department #${insertId} added correctly`);
     }
 }
 
