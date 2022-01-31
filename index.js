@@ -11,7 +11,7 @@ const start = async () => {
             type: 'list',
             name: 'instruction',
             message: 'How would you like to process',
-            choices: ['view departments', 'view roles', 'view employees', 'add department', 'add employees', "add roles", "update", 'finish']
+            choices: ['view departments', 'view roles', 'view employees', 'add department', 'add employee', "add roles", "update", 'finish']
         }
     );
     
