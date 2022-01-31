@@ -29,7 +29,7 @@ class Employees {
     });
         
     const managersArray = [];
-    employeeSqlArr.forEach((obj) => {
+    employeesArray.forEach((obj) => {
       if (obj.employee_id === obj.manager_id) {
         managersArray.push({ 'last name': obj.last_name, id: obj.manager_id });
       }

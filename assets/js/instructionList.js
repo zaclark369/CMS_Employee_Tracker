@@ -36,7 +36,7 @@ class instructionList {
     }
 
     async addEmployee() {
-        await this.Employees.addEmployees();
+        await this.Employees.addEmployee();
     }
 
     // async updateEmployeeRole() {
